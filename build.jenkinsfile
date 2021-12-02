@@ -1,7 +1,7 @@
 pipeline {
   agent any
   stages{
-    stage('Checkout from Git') {
+    stge('Checkout from Git') {
             checkout scm:
             [$class: 'GitSCM', branches: [[name: 'main']],
              extensions: [[$class: 'CloneOption', noTags: false]]]
